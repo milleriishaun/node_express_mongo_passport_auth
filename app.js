@@ -39,18 +39,16 @@ app.use(require('./routes'));
 // Error handlers and middlewares
 if(!isProduction) {
     app.use((req, res, next) => {
-      res.status(500);
-
-      res.json({});
-      next();
+        res.status(500);
+        res.json({});
+        next();
     });
   }
 
-  app.use((req, res, next) => {
-    res.status(500);
-
-    res.json({});
-    next();
-  });
+    app.use((req, res, next) => {
+        res.status(500);
+        res.json({});
+        next();
+    });
 
 app.listen(8000, () => console.log('Server running on http://localhost:8000/'));
