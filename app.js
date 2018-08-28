@@ -37,7 +37,7 @@ require('./models/Users');
 require('./config/passport');
 app.use(require('./routes'));
 
-// Error handlers and middlewares
+// Error handlers and middleware
 if(!isProduction) {
     app.use((req, res, next) => {
         res.status(500);
